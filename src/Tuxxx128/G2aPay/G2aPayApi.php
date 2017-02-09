@@ -352,6 +352,26 @@ class G2aPayApi implements IG2aPay
     }
 
     /**
+     * Set currency code
+     * @return self
+     */
+    public function setCurrency($val)
+    {
+        $this->currency = $val;
+
+        return $this;
+    }
+
+    /**
+     * Get currency code
+     * @return string
+     */
+    public function getCurrency()
+    {
+        return $this->currency;
+    }
+
+    /**
      * Get API hash
      * @return string
      */

@@ -63,6 +63,15 @@ Or you can set directly fixed amount:
 $g2aPayApi->addAmountDiscountItem($item, 5); // 5 EUR
 ```
 
+##Change default currency:##
+The function is not calculating..
+
+```
+<?php
+
+$g2aPayApi->setCurrency("USD"); // from default currency 'EUR' to 'USD'
+```
+
 ##Create new payment:##
 
 ```

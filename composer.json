@@ -12,6 +12,7 @@
 		"classmap": ["src/"]
 	},
 	"require": {
-		"php": ">=5.4.0"
+		"php": ">=5.4.0",
+		"tuxxx128/g2a-pay-php5-api": "^1.1"
 	}
 }
