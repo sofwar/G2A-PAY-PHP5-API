@@ -105,7 +105,7 @@ class G2aPayApi implements IG2aPay
     public function calculateIpnHash($transactionId, $orderId, $amount)
     {
         return hash('sha256',
-            $transactionId.$orderId.number_format($amount, 2).$this->secretKey);
+            $transactionId.$orderId.$amount.$this->secretKey);
     }
 
     /**
