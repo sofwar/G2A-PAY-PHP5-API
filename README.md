@@ -108,3 +108,16 @@ else {
 	// ...
 }
 ```
+
+##Verify IPN hash##
+
+```
+<?php 
+
+if($_POST['hash'] == $g2aPayApi->calculateIpnHash($transactionId, $orderId, $amount)) {
+	// ...
+}
+else {
+	// ...
+}
+```
