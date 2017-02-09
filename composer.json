@@ -1,0 +1,19 @@
+{
+	"name": "martin/g2apay-php-api",
+	"type": "library",
+	"license": "GPL",
+	"authors": [
+		{
+			"name": "Martin Liprt",
+			"email": "tuxxx128@gmail.com"
+		}
+	],
+	"autoload": {
+		"classmap": ["src/"]
+	},
+	"require": {
+	},
+	"require-dev": {
+		"mockery/mockery": "^0.9.7"
+	}
+}

@@ -1,0 +1,86 @@
+#***G2A PAY - PHP API***#
+Complex PHP5 CURL library. See also offical DOC: https://pay.g2a.com/documentation#introduction
+
+##Install (Composer):##
+
+```
+composer require tuxxx128/G2A-PAY-PHP5-API:dev-master
+```
+
+##Initialization:##
+
+```
+<?php 
+
+use Tuxxx128\G2aPay\G2aPayApi;
+use Tuxxx128\G2aPay\G2aPayItem;
+
+$g2aPayApi = new G2aPayApi('API HASH', 'SECRET KEY', true, 'EMAIL OF STORE');
+```
+
+Boolean type in construction determines mode of environment production (***true***) or development (***false***).
+
+##Add new item to order list:##
+```
+<?php 
+
+$item = (new G2aPayItem)->itemTemplate(); // just chunk :-)
+
+$item->name = "My item";
+$item->url = "http://...";
+$item->price = 10; // default currency is 'EUR'
+
+$g2aPayApi->addItem($item);
+```
+
+##Set discount (percent or fixed amount):##
+```
+<?php 
+
+$item = (new G2aPayItem)->itemTemplate();
+
+$item->name = "Discount";
+$item->url = "http://...";
+```
+
+Set over percent:
+
+```
+$g2aPayApi->addPercentDiscountItem($item, 25); // 25% from total amount
+```
+
+Or you can set directly fixed amount:
+
+```
+$g2aPayApi->addAmountDiscountItem($item, 5); // 5 EUR
+```
+
+##Create new payment:##
+
+```
+<?php
+
+$g2aPayApi->setUrlFail("http://..");
+$g2aPayApi->setUrlSuccess("http://..");
+$g2aPayApi->setOrderId(ORDER ID);
+// $g2aPayApi->setEmail('user@server.tld');
+
+header('Location: '.$g2aPayApi->getRedirectUrlOnGateway());
+```
+
+##Get complete transaction detail##
+
+```
+<?php 
+
+$transactionDetail = $g2aPayApi->getPaymentDetailById($transactionId);
+
+var_dump($transactionDetail);
+```
+
+##Full example file##
+
+```
+<?php 
+
+```
