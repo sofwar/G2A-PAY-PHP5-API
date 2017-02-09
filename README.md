@@ -1,5 +1,5 @@
 #***G2A PAY - PHP API***#
-Complex PHP5 CURL library. See also offical DOC: https://pay.g2a.com/documentation#introduction
+Complex PHP5 CURL library. See also official documentation: https://pay.g2a.com/documentation#introduction
 
 ##***Great features of the library:***##
 - ***Get payment detail***
