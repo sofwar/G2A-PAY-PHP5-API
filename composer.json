@@ -1,7 +1,7 @@
 {
-	"name": "martin/g2apay-php-api",
+	"name": "tuxxx128/G2A-PAY-PHP5-API",
 	"type": "library",
-	"license": "GPL",
+	"license": "BSD",
 	"authors": [
 		{
 			"name": "Martin Liprt",
@@ -12,8 +12,5 @@
 		"classmap": ["src/"]
 	},
 	"require": {
-	},
-	"require-dev": {
-		"mockery/mockery": "^0.9.7"
 	}
 }
