@@ -1,16 +1,19 @@
 <?php
 
+// load composer libs
+require_once 'vendor/autoload.php';
+
 use Tuxxx128\G2aPay\G2aPayApi;
 use Tuxxx128\G2aPay\G2aPayItem;
 
-$g2aPayApi = new G2aPayApi('API HASH', 'SECRET KEY', true, 'EMAIL OF STORE');
+$g2aPayApi = new G2aPayApi('API HASH', 'SECRET KEY', false); // test environment
 
 // Order items
 
 // item - 1
 $itemOne = (new G2aPayItem)->itemTemplate();
 
-$itemOne->name = "My item";
+$itemOne->name = "My item #1";
 $itemOne->url = "http://google.com";
 $itemOne->price = 10; // default currency is 'EUR'
 
@@ -19,11 +22,11 @@ $g2aPayApi->addItem($itemOne);
 // item - 2
 $itemTwo = (new G2aPayItem)->itemTemplate();
 
-$itemTwo->name = "My item";
+$itemTwo->name = "My item #2";
 $itemTwo->url = "http://google.com";
-$itemTwo->price = 25; // default currency is 'EUR'
+$itemTwo->price = 20; // default currency is 'EUR'
 
-$g2aPayApi->addItem($itemOne);
+$g2aPayApi->addItem($itemTwo);
 
 // Discount item
 $itemDiscount = (new G2aPayItem)->itemTemplate();
@@ -41,3 +44,4 @@ $g2aPayApi->setOrderId(1234);
 // $g2aPayApi->setEmail('user@server.tld');
 
 header('Location: '.$g2aPayApi->getRedirectUrlOnGateway());
+die;
