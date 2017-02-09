@@ -4,7 +4,7 @@ Complex PHP5 CURL library. See also offical DOC: https://pay.g2a.com/documentati
 ##Install (Composer):##
 
 ```
-composer require tuxxx128/G2A-PAY-PHP5-API
+composer require tuxxx128/g2a-pay-php5-api
 ```
 
 ##Initialization:##
