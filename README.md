@@ -41,7 +41,7 @@ $item->price = 10; // default currency is 'EUR'
 $g2aPayApi->addItem($item);
 ```
 
-##Set discount (percent or fixed amount):##
+##Set discount (percents or fixed amount):##
 ```
 <?php 
 
@@ -93,4 +93,18 @@ header('Location: '.$g2aPayApi->getRedirectUrlOnGateway());
 $transactionDetail = $g2aPayApi->getPaymentDetailById($transactionId);
 
 var_dump($transactionDetail);
+```
+
+##Detect current environment##
+Maybe you need detect environment in your application.
+
+```
+<?php 
+
+if($g2aPayApi->checkIsProductionEnvironment()) {
+	// ...
+}
+else {
+	// ...
+}
 ```
