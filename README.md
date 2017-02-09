@@ -24,7 +24,7 @@ Boolean type in construction determines mode of environment production (***true*
 ```
 <?php 
 
-$item = (new G2aPayItem)->itemTemplate(); // just chunk :-)
+$item = (new G2aPayItem)->itemTemplate();
 
 $item->name = "My item";
 $item->url = "http://...";
@@ -76,11 +76,4 @@ header('Location: '.$g2aPayApi->getRedirectUrlOnGateway());
 $transactionDetail = $g2aPayApi->getPaymentDetailById($transactionId);
 
 var_dump($transactionDetail);
-```
-
-##Full example file##
-
-```
-<?php 
-
 ```
