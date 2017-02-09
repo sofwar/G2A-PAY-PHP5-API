@@ -5,7 +5,9 @@ Complex PHP5 CURL library. See also offical DOC: https://pay.g2a.com/documentati
 
 ```
 composer require tuxxx128/g2a-pay-php5-api:dev-master
-
+```
+or just add:
+```
 {
     "require": {
         "tuxxx128/g2a-pay-php5-api": "dev-master"
