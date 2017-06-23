@@ -143,7 +143,11 @@ class G2aPayApi implements IG2aPay
                                                 $post = true, array $header = [])
     {
         $ch  = curl_init();
-        $url = IG2aPay::REST_PRODUCTION_URL;
+        $url = IG2aPay::REST_TEST_URL;
+       
+        if ($this->checkIsProductionEnvironment()) {
+             $url = IG2aPay::REST_PRODUCTION_URL;
+        }
 
         // authorized header
         curl_setopt($ch, CURLOPT_HTTPHEADER, [

@@ -6,7 +6,7 @@ require_once 'vendor/autoload.php';
 use Tuxxx128\G2aPay\G2aPayApi;
 use Tuxxx128\G2aPay\G2aPayItem;
 
-$g2aPayApi = new G2aPayApi('API HASH', 'SECRET KEY', false); // test environment
+$g2aPayApi = new G2aPayApi('API HASH', 'SECRET KEY', false, 'store.email@server.tld'); // test environment
 
 // Order items
 
