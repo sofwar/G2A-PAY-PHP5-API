@@ -7,7 +7,7 @@ Complex PHP5 CURL library. See also official documentation: https://pay.g2a.com/
 - ***Easily add item to order***
 - ***Verify IPN hash***
 
-##Install (Composer):##
+## Install (Composer): ##
 
 ```
 composer require tuxxx128/g2a-pay-php5-api
@@ -21,7 +21,7 @@ or just add:
 }
 ```
 
-##Initialization:##
+## Initialization: ##
 
 ```
 <?php 
@@ -34,7 +34,7 @@ $g2aPayApi = new G2aPayApi('API HASH', 'SECRET KEY', true, 'EMAIL OF STORE');
 
 Boolean type in construction determines mode of environment production (***true***) or development (***false***).
 
-##Add new item to order list:##
+## Add new item to order list: ##
 ```
 <?php 
 
@@ -47,7 +47,7 @@ $item->price = 10; // default currency is 'EUR'
 $g2aPayApi->addItem($item);
 ```
 
-##Set discount (percents or fixed amount):##
+## Set discount (percents or fixed amount): ##
 ```
 <?php 
 
@@ -69,7 +69,7 @@ Or you can set directly fixed amount:
 $g2aPayApi->addAmountDiscountItem($item, 5); // 5 EUR
 ```
 
-##Change default currency:##
+## Change default currency: ##
 The function is not calculating..
 
 ```
@@ -78,7 +78,7 @@ The function is not calculating..
 $g2aPayApi->setCurrency("USD"); // from default currency 'EUR' to 'USD'
 ```
 
-##Create new payment:##
+## Create new payment: ##
 
 ```
 <?php
@@ -91,7 +91,7 @@ $g2aPayApi->setOrderId(ORDER ID);
 header('Location: '.$g2aPayApi->getRedirectUrlOnGateway());
 ```
 
-##Get complete transaction detail##
+## Get complete transaction detail ##
 
 ```
 <?php 
@@ -101,7 +101,7 @@ $transactionDetail = $g2aPayApi->getPaymentDetailById($transactionId);
 var_dump($transactionDetail);
 ```
 
-##Detect current environment##
+## Detect current environment ##
 Maybe you need detect environment in your application.
 
 ```
@@ -115,7 +115,7 @@ else {
 }
 ```
 
-##Verify IPN hash##
+## Verify IPN hash ##
 
 ```
 <?php 
