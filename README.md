@@ -1,3 +1,5 @@
+[![gitcheese.com](https://s3.amazonaws.com/gitcheese-ui-master/images/badge.svg)](https://www.gitcheese.com/donate/users/14346457/repos/81394009)
+
 # ***G2A PAY - PHP API*** #
 Complex PHP5 CURL library. See also official documentation: https://pay.g2a.com/documentation#introduction
 
@@ -127,3 +129,4 @@ else {
 	// ...
 }
 ```
+[![gitcheese.com](https://s3.amazonaws.com/gitcheese-ui-master/images/badge.svg)](https://www.gitcheese.com/donate/users/14346457/repos/81394009)
