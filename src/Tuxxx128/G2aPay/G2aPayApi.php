@@ -210,7 +210,7 @@ class G2aPayApi implements IG2aPay
         $result = json_decode($response);
 
         if (!isset($result->token)) {
-            throw new G2aPayException('Something is wrong, returned token is invalid, please check your sent parameters.');
+            throw new G2aPayException('Something is wrong '.(isset($result->details) ?  '"'.implode(', ', $result->details).'"' : null).', returned token is invalid, please check your sent parameters.');
         }
 
         $this->redirectUrlOnGateway = $url.'/index/gateway?token='.$result->token;
