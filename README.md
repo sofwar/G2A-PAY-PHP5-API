@@ -1,3 +1,5 @@
+***No Maintenance Intended***
+
 # ***G2A PAY - PHP API*** #
 Complex PHP5 CURL library. See also official documentation: https://pay.g2a.com/documentation#introduction
 
